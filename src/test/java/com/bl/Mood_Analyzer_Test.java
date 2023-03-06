@@ -19,7 +19,11 @@ public class Mood_Analyzer_Test {
 		assertEquals("Happy", analyser.analyzeMood());
 	}
 	
-	
+	@Test
+	public void check_MoodAnalyzer_to_Return_Happy_When_Given_Null() {
+		Mood_Analyzer analyser = new Mood_Analyzer("null");
+		assertEquals("Happy",analyser.analyzeMood());
+	}
 //	@Test
 //	public void test() {
 //		fail("Not yet implemented");
