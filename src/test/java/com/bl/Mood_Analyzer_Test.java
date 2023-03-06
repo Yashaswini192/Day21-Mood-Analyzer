@@ -7,7 +7,7 @@ import org.junit.Test;
 public class Mood_Analyzer_Test {
 
 	@Test
-	public void check_MoodAnalyzer_to_Return_Sad() {
+	public void check_MoodAnalyzer_to_Return_Sad()  {
 		Mood_Analyzer analyser = new Mood_Analyzer("sad");
 		
 		assertEquals("sad", analyser.analyzeMood());
@@ -20,7 +20,7 @@ public class Mood_Analyzer_Test {
 	}
 	
 	@Test
-	public void check_MoodAnalyzer_to_Return_Happy_When_Given_Null() {
+	public void check_MoodAnalyzer_to_Return_Happy_When_Given_Null() throws MoodAnalysisException{
 		Mood_Analyzer analyser = new Mood_Analyzer("null");
 		assertEquals("Happy",analyser.analyzeMood());
 	}

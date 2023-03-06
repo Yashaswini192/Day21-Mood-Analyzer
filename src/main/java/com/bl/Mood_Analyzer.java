@@ -17,7 +17,7 @@ public class Mood_Analyzer {
 	public String analyzeMood() {
 		try {
 			if(message.length() == 0) {
-				this.message = null;
+				throw new MoodAnalysisException(MoodAnalysisException.ExceptionType.ENTERED_EMPTY,"Message canot be empty");
 			}
 		if(message.contains("sad")) {
 			return "sad";
@@ -26,7 +26,7 @@ public class Mood_Analyzer {
 		}	
 	}catch(NullPointerException e){
 		
-		return "Happy";
+		throw new MoodAnalysisException(MoodAnalysisException.ExceptionType.ENTERED_NULL,"Message canot be null");
 	}
 }
 }
